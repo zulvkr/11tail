@@ -1,0 +1,26 @@
+{
+  "name": "11tail",
+  "version": "1.0.0",
+  "description": "Eleventy boilerplate with low level components utilizing 11ty shortcodes and tailwind. Made to work with form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zulvkr/11tail.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zulvkr/11tail/issues"
+  },
+  "homepage": "https://github.com/zulvkr/11tail#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.2.1",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
