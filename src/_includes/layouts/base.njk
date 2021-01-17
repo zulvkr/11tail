@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/style.css' | url }}">
-    <title>Document</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-    <header>
 
+  <div class="bg-green-400">
+    <div class="container mx-auto flex flex-col items-left py-3 text-lg font-semibold text-white">
+    Whatsapp Form
+  </div>
+  </div>
+    <header>
+      {{ title }}
     </header>
     <main>
       {{ content | safe }}
