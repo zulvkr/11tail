@@ -1,17 +1,22 @@
-module.exports = function (config) {
+module.exports = function (eleventyConfig) {
 
-    config.setUseGitIgnore(false);
+  eleventyConfig.setUseGitIgnore(false);
 
-    config.addWatchTarget("src/_tmp/style.css");
+  // Register Components as Shortcode
+  eleventyConfig.addShortcode("Button", require('./src/_includes/components/attributes/Button.11ty'));
+  eleventyConfig.addShortcode("Label", require('./src/_includes/components/attributes/Label.11ty'));
+  eleventyConfig.addShortcode("TextForm", require('./src/_includes/components/attributes/Text.11ty'));
+  eleventyConfig.addShortcode("Select", require('./src/_includes/components/attributes/Select.11ty'));
 
-    if (!process.env.ELEVENTY_PRODUCTION) 
-    {
-      config.addPassthroughCopy({ "src/_tmp/style.css": "./style.css" });
+  eleventyConfig.addWatchTarget("src/_tmp/style.css");
+
+  if (!process.env.ELEVENTY_PRODUCTION) {
+    eleventyConfig.addPassthroughCopy({ "src/_tmp/style.css": "./style.css" });
+  }
+
+  return {
+    dir: {
+      input: "src"
     }
-
-    return {
-          dir: {
-          input: "src"
-        }
-      };
+  };
 }

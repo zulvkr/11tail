@@ -1,8 +1,29 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="flex justify-center items-center">
-    <div>
-      {{ content | safe }}
-    </div>
+<div class="flex justify-center items-center mb-4">
+  <div class="mx-auto px-5 max-w-xl">
+    <p class="text-gray-400 mb-5">#render markdown</p>
+    <div class="mb-5">{{ content | safe }}</div>
+    <p class="text-gray-400 mb-5">#render form</p>
+    <form action="">
+      <div class="mb-6">
+        <label {% Label "name" %}>Nama</label>
+        <input {% TextForm "name", "Nama", true %}>
+      </div>
+      <div class="mb-6">
+        <label {% Label "banks" %}>Bank</label>
+        <div class="relative">
+          <select {% Select "banks", true %}>
+            <option>Bank 1</option>
+            <option>Bank 2</option>
+          </select>
+        </div>
+      </div>
+      <button {% Button "yes" %}>
+        Click Me!
+      </button>
+    </form>
+
   </div>
+</div>
