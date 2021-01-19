@@ -1,0 +1,22 @@
+{
+    "title": "Title",
+    "body": "textbody example",
+    "form": [
+        {
+            "label": "Nama",
+            "id": "name",
+            "required": true
+        },
+        {
+            "label": "Jumlah Donasi",
+            "id": "jumlah",
+            "required": true
+        },
+        {
+            "label": "Bank",
+            "id": "bank",
+            "required": true,
+            "options": ["Bank A", "Bank B"]
+        }
+    ]
+}
