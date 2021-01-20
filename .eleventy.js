@@ -1,16 +1,30 @@
 module.exports = function (eleventyConfig) {
 
+  // Use .eleventyignore
+  //
   eleventyConfig.setUseGitIgnore(false);
 
-  // Register Components as Shortcode
-  eleventyConfig.addShortcode("Button", require('./src/_includes/components/attributes/Button.11ty'));
-  eleventyConfig.addShortcode("Label", require('./src/_includes/components/attributes/Label.11ty'));
-  eleventyConfig.addShortcode("TextForm", require('./src/_includes/components/attributes/Text.11ty'));
-  eleventyConfig.addShortcode("Select", require('./src/_includes/components/attributes/Select.11ty'));
+  eleventyConfig.addNunjucksShortcode(
+    "Button", require('./src/_includes/components/attributes/Button.11ty'
+    /* arguments: value */)
+  );
+  eleventyConfig.addNunjucksShortcode(
+    "Label", require('./src/_includes/components/attributes/Label.11ty'
+    /* arguments: forId */)  
+  );
+  eleventyConfig.addNunjucksShortcode(
+    "Field", require('./src/_includes/components/attributes/Field.11ty'
+    /* arguments: type, id, , name, placeholder, required */)
+  );
+  eleventyConfig.addNunjucksShortcode(
+    "Select", require('./src/_includes/components/attributes/Select.11ty'
+    /* arguments: id, name, required */)
+  );
 
-  eleventyConfig.addWatchTarget("src/_tmp/style.css");
-
+  // Trigger reload when CSS updated
+  //
   if (!process.env.ELEVENTY_PRODUCTION) {
+    eleventyConfig.addWatchTarget("src/_tmp/style.css");
     eleventyConfig.addPassthroughCopy({ "src/_tmp/style.css": "./style.css" });
   }
 

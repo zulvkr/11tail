@@ -9,20 +9,20 @@ layout: layouts/base.njk
     <form action="">
       <div class="mb-6">
         <label {% Label "name" %}>Nama</label>
-        <input {% TextForm "name", "Nama", true %}>
+        <input {% Field id="name", placeholder="Nama" %}>
       </div>
       <div class="mb-6">
         <label {% Label "banks" %}>Bank</label>
         <div class="relative">
-          <select {% Select "banks", true %}>
+          <select {% Select "banks" %}>
             <option>Bank 1</option>
             <option>Bank 2</option>
           </select>
         </div>
       </div>
-      <button {% Button "yes" %}>
+      <button {% Button "do-something" %}>
         Click Me!
       </button>
-    </form>
+    </form>    
   </div>
 </div>
