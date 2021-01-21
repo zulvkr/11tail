@@ -16,9 +16,19 @@
             "label": "Bank",
             "id": "bank",
             "required": true,
-            "options": [
+            "enum": [
                 "Bank A",
                 "Bank B"
+            ]
+        },
+        {
+            "label": "Quality of Air",
+            "id": "air",
+            "required": true,
+            "enum": [
+                "Very good",
+                "Good",
+                "Bad"
             ]
         }
     ]

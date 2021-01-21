@@ -6,30 +6,25 @@ module.exports = function (eleventyConfig) {
   //
   eleventyConfig.setUseGitIgnore(false);
 
+  const Form = require("./src/_includes/components/_all");
+  
   eleventyConfig.addShortcode(
-    "Button", require('./src/_includes/components/attributes/Button.11ty')
-    /* arguments: value */
-  );
+    "Button", Form.att.Button); /* arguments: value */
+  
   eleventyConfig.addShortcode(
-    "Label", require('./src/_includes/components/attributes/Label.11ty')
-    /* arguments: forId */
-  );
+    "Label", Form.att.Label); /* arguments: forId */
+  
   eleventyConfig.addShortcode(
-    "Text", require('./src/_includes/components/attributes/Text.11ty')
-    /* arguments: id, name, placeholder, required:bool */
-  );
+    "Text", Form.att.Text); /* arguments: id, name, placeholder, required:bool */
+  
   eleventyConfig.addShortcode(
-    "Select", require('./src/_includes/components/attributes/Select.11ty')
-    /* arguments: id, name, required:bool */
-  );
+    "Select", Form.att.Select); /* arguments: id, name, required:bool */
+
   eleventyConfig.addShortcode(
-    "SelectField", require('./src/_includes/components/SelectField.11ty')
-    /* arguments: id, name, required:bool, ...options */
-  );
+    "SelectField", Form.SelectField); /* arguments: id, name, required:bool, ...options */
+
   eleventyConfig.addPairedShortcode(
-    "FieldGroup", require('./src/_includes/components/FieldGroup.11ty')
-    /* arguments: content, id, name */
-  );
+    "Group", Form.Group); /* arguments: content, id, name */
 
 
   // Trigger reload when CSS updated
