@@ -16,7 +16,10 @@
             "label": "Bank",
             "id": "bank",
             "required": true,
-            "options": ["Bank A", "Bank B"]
+            "options": [
+                "Bank A",
+                "Bank B"
+            ]
         }
     ]
 }

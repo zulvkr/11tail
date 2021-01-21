@@ -1,24 +1,30 @@
+const inspect = require("util").inspect;
+
 module.exports = function (eleventyConfig) {
 
   // Use .eleventyignore
   //
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addNunjucksShortcode(
-    "Button", require('./src/_includes/components/attributes/Button.11ty'
-    /* arguments: value */)
+  eleventyConfig.addShortcode(
+    "Button", require('./src/_includes/components/attributes/Button.11ty')
+    /* arguments: value */
   );
-  eleventyConfig.addNunjucksShortcode(
-    "Label", require('./src/_includes/components/attributes/Label.11ty'
-    /* arguments: forId */)  
+  eleventyConfig.addShortcode(
+    "Label", require('./src/_includes/components/attributes/Label.11ty')
+    /* arguments: forId */
   );
-  eleventyConfig.addNunjucksShortcode(
-    "Field", require('./src/_includes/components/attributes/Field.11ty'
-    /* arguments: type, id, , name, placeholder, required */)
+  eleventyConfig.addShortcode(
+    "Text", require('./src/_includes/components/attributes/TextField.11ty')
+    /* arguments: id, name, placeholder, required:bool */
   );
-  eleventyConfig.addNunjucksShortcode(
-    "Select", require('./src/_includes/components/attributes/Select.11ty'
-    /* arguments: id, name, required */)
+  eleventyConfig.addShortcode(
+    "Select", require('./src/_includes/components/attributes/Select.11ty')
+    /* arguments: id, name, required:bool */
+  );
+  eleventyConfig.addShortcode(
+    "SelectField", require('./src/_includes/components/SelectField.11ty')
+    /* arguments: options:Arr, fieldArgs:Arr */
   );
 
   // Trigger reload when CSS updated
@@ -27,6 +33,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("src/_tmp/style.css");
     eleventyConfig.addPassthroughCopy({ "src/_tmp/style.css": "./style.css" });
   }
+
+  eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
 
   return {
     dir: {
