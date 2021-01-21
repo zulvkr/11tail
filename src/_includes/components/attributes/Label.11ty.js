@@ -2,7 +2,7 @@
 
 module.exports = function(forId) {
     return `
-    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+    class="block tracking-wide text-gray-600 text-sm font-semibold mb-2"
     for="${forId}"
     `
 }

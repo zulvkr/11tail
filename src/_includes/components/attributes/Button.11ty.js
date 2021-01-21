@@ -4,6 +4,6 @@ module.exports = (value = "") => {
     return `
     type="submit"
     value="${value}"
-    class="rounded bg-green-500 hover:bg-green-700 py-2 px-4 text-white"
+    class="rounded-md font-bold bg-green-500 transition hover:bg-green-600 focus:bg-green-600 py-2 px-4 text-white"
     `;
 }
