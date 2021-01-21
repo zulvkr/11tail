@@ -6,33 +6,8 @@ layout: layouts/base.njk
     <p class="text-gray-400 mb-5">#render markdown</p>
     <div class="mb-5">{{ content | safe }}</div>
     <p class="text-gray-400 mb-5">#render form</p>
-    <form action="">
-      <div class="mb-6">
-        <label {% Label "name" %}>Nama</label>
-        <input {% Text "name", "name", "Your Name", true %}>
-      </div>
-      <div class="mb-6">
-        <label {% Label "banks" %}>Bank</label>
-        <div class="relative">
-          <select {% Select "banks", "banks", true %}>
-            <option>Bank 1</option>
-            <option>Bank 2</option>
-          </select>
-        </div>
-      </div>
 
-      <div class="mb-6">
-        <label {% Label "banks" %}>Bank</label>
-        <div class="relative">
-          {% SelectField ["banks", "banks", true], "Bank 1", "Bank 2" %}
-        </div>
-      </div>
+    {% include '../components/Form.njk' %}
 
-      <button {% Button "do-something" %}>
-        Click Me!
-      </button>
-    </form>
-    <div>
-    </div>    
   </div>
 </div>

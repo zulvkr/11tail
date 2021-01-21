@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
     /* arguments: forId */
   );
   eleventyConfig.addShortcode(
-    "Text", require('./src/_includes/components/attributes/TextField.11ty')
+    "Text", require('./src/_includes/components/attributes/Text.11ty')
     /* arguments: id, name, placeholder, required:bool */
   );
   eleventyConfig.addShortcode(
@@ -24,8 +24,13 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addShortcode(
     "SelectField", require('./src/_includes/components/SelectField.11ty')
-    /* arguments: options:Arr, fieldArgs:Arr */
+    /* arguments: id, name, required:bool, ...options */
   );
+  eleventyConfig.addPairedShortcode(
+    "FieldGroup", require('./src/_includes/components/FieldGroup.11ty')
+    /* arguments: content, id, name */
+  );
+
 
   // Trigger reload when CSS updated
   //
