@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   const Form = require("./src/_includes/components/_all");
   
   eleventyConfig.addShortcode(
-    "Button", Form.att.Button); /* arguments: value */
+    "Button", Form.att.Button);
   
   eleventyConfig.addShortcode(
     "Label", Form.att.Label); /* arguments: forId */

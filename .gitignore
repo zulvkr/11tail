@@ -83,8 +83,10 @@ typings/
 dist
 
 # Eleventy build / generate output
-_site
+_site/
 **/**/fake_*
+
+# Remove NetlifyCMS form this repo, this repo for design only
 
 # Gatsby files
 .cache/

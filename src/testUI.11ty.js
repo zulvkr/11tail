@@ -18,7 +18,7 @@ class formUI {
             <form>
                 ${Form.Group(Text, 'name', 'Nama')}
                 ${Form.Group(SelectField, 'banks', 'Bank')}
-                <button ${Form.att.Button("")}>Call Me!</<button>
+                <button ${Form.att.Button()}>Call Me!</<button>
             </form>
             </div>
         </div>

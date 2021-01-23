@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
     <title>{{ title }}</title>
 </head>
-<body class="flex flex-col min-h-full">
+<body class="flex flex-col min-h-screen">
 
   <div class="bg-gradient-to-r from-blue-300 via-green-300 to-green-200">
     <div class="container mx-auto flex flex-col items-left h-4 px-6 text-lg font-semibold text-white">
@@ -21,6 +21,10 @@
     <main>
       {{ content | safe }}
     </main>
-    <footer class="flex bg-green-500 h-2 mt-auto"><span></span></footer>
+    <footer class="flex bg-green-500 h-2 mt-auto">
+      <script>
+        {% include 'js/inline.js' %}
+      </script>
+    </footer>
 </body>
 </html>
