@@ -2,7 +2,7 @@ module.exports = {
   purge: [
     './_site/**/*.html'
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     fontFamily: {
       'sans': ['poppins', 'ui-sans-serif', 'system-ui'],

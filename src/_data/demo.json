@@ -1,6 +1,6 @@
 {
-    "title": "Title",
-    "body": "textbody example",
+    "title": "Demo Form Preset",
+    "action": "console.log",
     "form": [
         {
             "label": "Name",
@@ -17,8 +17,10 @@
             "id": "bank",
             "required": true,
             "enum": [
-                "Bank A",
-                "Bank B"
+                "Bank BNI - [074] 10685 8967 8682 ",
+                "Bank Mandiri - [120] 2629 383 02826",
+                "Bank BTPN - [190] 6283 383 2935",
+                "Bank BRI - [101] 8237 292 02949"
             ]
         }
     ]

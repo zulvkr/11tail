@@ -1,9 +1,9 @@
 ---
 layout: layouts/form.njk
-title: Form _INCREMENT_
+title: Form 3
 ---
 
-This is Form _INCREMENT_
+This is Form 3
 
 🎉 Tailwind CSS v0.4.0 is out!
 
