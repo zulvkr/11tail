@@ -8,7 +8,7 @@ class formUI {
 
     render() {
         const Form = require('./_includes/components/_all');
-        const SelectField = Form.SelectField('banks', 'banks', true,
+        const SelectField = Form.SelectField('banks', 'banks', true, null,
          ['Bank Mandiri', 'Bank BNI', 'Bank BRI', 'Bank BTPN']);
         const Text = `<input ${Form.att.Text('name', 'name', 'Nama lengkap', true)}/>`
 

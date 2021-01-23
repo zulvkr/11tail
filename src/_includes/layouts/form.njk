@@ -12,11 +12,11 @@ layout: layouts/base.njk
       {% for field in fields %}
         {% if field.enum %}
           {% Group field.id, field.label  %}
-            {% SelectField field.id, field.id, true, field.enum %}
+            {% SelectField field.id, field.id, true, null, field.enum %}
           {% endGroup %}
         {% else %}
           {% Group field.id, field.label  %}
-            <input {% Text field.id , field.id , field.label , true %}>
+            <input {% Text field.id , field.id , "" , true %}>
           {% endGroup %}
         {% endif %}
       {% endfor %}

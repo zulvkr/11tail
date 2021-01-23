@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
     "Button", Form.att.Button);
   
   eleventyConfig.addShortcode(
-    "Label", Form.att.Label); /* arguments: forId */
+    "Label", Form.att.Label); /* arguments: for */
   
   eleventyConfig.addShortcode(
     "Text", Form.att.Text); /* arguments: id, name, placeholder, required:bool */
@@ -21,10 +21,10 @@ module.exports = function (eleventyConfig) {
     "Select", Form.att.Select); /* arguments: id, name, required:bool */
 
   eleventyConfig.addShortcode(
-    "SelectField", Form.SelectField); /* arguments: id, name, required:bool, ...options */
+    "SelectField", Form.SelectField); /* arguments: id, name, required:bool, placeholder:string||null, [options] */
 
   eleventyConfig.addPairedShortcode(
-    "Group", Form.Group); /* arguments: content, id, name */
+    "Group", Form.Group); /* arguments: content, for, label */
 
 
   // Trigger reload when CSS updated

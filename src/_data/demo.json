@@ -3,13 +3,13 @@
     "body": "textbody example",
     "form": [
         {
-            "label": "Nama",
+            "label": "Name",
             "id": "name",
             "required": true
         },
         {
-            "label": "Jumlah Donasi",
-            "id": "jumlah",
+            "label": "Amount of Donation",
+            "id": "amount",
             "required": true
         },
         {
@@ -19,16 +19,6 @@
             "enum": [
                 "Bank A",
                 "Bank B"
-            ]
-        },
-        {
-            "label": "Quality of Air",
-            "id": "air",
-            "required": true,
-            "enum": [
-                "Very good",
-                "Good",
-                "Bad"
             ]
         }
     ]
