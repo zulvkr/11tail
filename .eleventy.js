@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
   if (!process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addWatchTarget("src/_tmp/style.css");
     eleventyConfig.addPassthroughCopy({ "src/_tmp/style.css": "./style.css" });
+    eleventyConfig.addPassthroughCopy({ "favicon.png": "./favicon.png" });
   }
 
   eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
