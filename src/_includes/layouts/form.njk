@@ -2,14 +2,12 @@
 layout: layouts/base.njk
 ---
 <div class="flex justify-center items-center mb-4">
-  <div class="mx-auto px-5 max-w-xl">
-    <p class="text-gray-400 mb-5">#render markdown</p>
-    <div class="mb-5">{{ content | safe }}</div>
-    <p class="text-gray-400 mb-5">#render form</p>
+  <div class="mx-auto px-5 border-t border-gray-200 py-10 sm:border-t-4 sm:border-gray-500 sm:border-dotted">
+    <article class="mb-5 prose prose-blue lg:prose-lg">{{ content | safe }}</article>
 
     {% set fields = demo.form %}
 
-    <form action="{{ demo.action }}">
+    <form action="{{ demo.action }}" class=" mx-auto max-w-xl border-t-2 border-gray-500 border-dotted py-5 sm:border sm:border-solid sm:shadow-xl sm:px-5 sm:border-gray-100 sm:rounded-lg">
 
       {% for field in fields %}
         {% if field.enum %}
@@ -23,9 +21,12 @@ layout: layouts/base.njk
         {% endif %}
       {% endfor %}
 
-      <button {% Button demo.action %}>
-        Click Me!
-      </button>
+      <div class="rounded-b-lg flex flex-row-reverse">
+        <button {% Button null  %}>
+          Click Me!
+        </button>
+      </div>
+
     </form>
   </div>
 </div>

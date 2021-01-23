@@ -4,10 +4,15 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'sans': ['poppins', 'ui-sans-serif', 'system-ui'],
+    },
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
