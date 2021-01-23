@@ -3,9 +3,9 @@ function submit(event) {
     for (var pair of formData.entries()) {
         console.log(pair)
     }
-
+    window.alert('Check your console 😁')
     event.preventDefault();
-  }
-  
-  const form = document.querySelector('form');
-  form.addEventListener('submit', submit);
+}
+
+const form = document.querySelector('form');
+form.addEventListener('submit', submit);
