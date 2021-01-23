@@ -85,9 +85,10 @@ dist
 # Eleventy build / generate output
 _site/
 **/**/fake_*
-admin_example
+src/_tmp/
 
 # Remove NetlifyCMS form this repo, this repo for design onlyg
+src/admin_example/
 
 # Gatsby files
 .cache/
